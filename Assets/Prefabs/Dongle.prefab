@@ -112,7 +112,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 1
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!58 &7426404598909942338
@@ -162,8 +162,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36c8f61452184c44c9609bf0d6211133, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  effect: {fileID: 0}
   level: 0
   isDrag: 1
+  isMerge: 0
 --- !u!95 &498051642429646171
 Animator:
   serializedVersion: 5
