@@ -29,23 +29,7 @@ public abstract class Entity : MonoBehaviour
     protected void Setup()
     {
         HP = MaxHP;
-        MP = MaxMP;
-
-        StartCoroutine("Recovery");
-    }
-
-    /// <summary>
-    /// 초당 체력, 마나 회복
-    /// </summary>
-    protected IEnumerator Recovery()
-    {
-        while (true)
-        {
-            if (HP < MaxHP) HP += HPRecovery;
-            if (MP < MaxMP) MP += MPRecovery;
-
-            yield return new WaitForSeconds(1);
-        }
+        MP = MaxMP; 
     }
 
     // 상대방을 공격할 때 상대방의 TakeDamage() 호출
