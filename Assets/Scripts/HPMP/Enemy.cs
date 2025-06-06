@@ -62,7 +62,7 @@ public class Enemy : Entity
         }
 
         // HP를 200 ~ 500 랜덤 설정
-        maxHP = Random.Range(200, 501); // MaxHP 프로퍼티가 이 값을 참조
+        maxHP = Random.Range(200, 501);
         HP = maxHP;
     }
 }
