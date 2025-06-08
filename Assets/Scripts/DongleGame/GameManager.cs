@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -16,6 +17,8 @@ public class GameManager : MonoBehaviour
     public int maxLevel;
     public bool isOver;
 
+    public int KillCount = 0;       //적 처치 수
+    public TextMeshProUGUI killCountText;  //텍스트 연결
 
     private void Awake()
     {
@@ -64,7 +67,7 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
 
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(0.5f);
 
         NextDongle();
     }
@@ -92,12 +95,6 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        if(isOver)
-        {
-            return;
-        }
-        isOver = true;
-
         StartCoroutine("GameOverRoutine");
     }
 
@@ -106,17 +103,22 @@ public class GameManager : MonoBehaviour
         //1.장면 안에 활성화 되어있는 모든 동글 가져오기
         Dongle[] dongles = FindObjectsOfType<Dongle>();
 
-        //2. 지우기 전에 모든 동글의 물리효과 비활성화
-        for (int index = 0; index < dongles.Length; index++)
+        // 2. 모든 동글의 물리효과 비활성화
+        foreach (Dongle dongle in dongles)
         {
-            dongles[index].rigid.simulated = false;        
+            dongle.rigid.simulated = false;
         }
 
         //3. 1번 목록을 하나씩 접근해서 지우기
         for (int index = 0; index < dongles.Length; index++)
         {
             dongles[index].Hide(Vector3.up * 10000);
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.05f);
         }
+    }
+    public void AddKillCount()
+    {
+        KillCount++;
+        killCountText.text = $"처치횟수: {KillCount}";
     }
 }

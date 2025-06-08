@@ -1,4 +1,6 @@
 ﻿using System.Collections;
+using System.Security.Cryptography;
+using TMPro;
 using UnityEngine;
 
 public class Enemy : Entity
@@ -7,8 +9,11 @@ public class Enemy : Entity
 
     public Sprite[] enemySprites; //적 스프라이트 배열
 
-    private float maxHP; 
+    private float maxHP;
+
     private float currentHP;
+
+    public GameManager gameManager; // GameManager 참조
 
     private void Awake()
     {
@@ -31,11 +36,18 @@ public class Enemy : Entity
 
     public override void TakeDamage(float damage)
     {
+
         HP -= damage;
         StartCoroutine("HitAnimation");
 
-        if(HP <= 0)
+
+        if (HP <= 0)
         {
+            if (gameManager != null)
+            {
+                gameManager.AddKillCount();
+                Debug.Log($"죽은 적 수: {gameManager.KillCount}");
+            }
             ChangeEnemy();
         }
     }
@@ -65,4 +77,5 @@ public class Enemy : Entity
         maxHP = Random.Range(200, 501);
         HP = maxHP;
     }
+
 }

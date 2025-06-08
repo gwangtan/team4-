@@ -23,6 +23,8 @@ public class Attack : MonoBehaviour
             Debug.Log($"[공격] 점수 {gameManager.score} × 10 = {damage} 데미지 입힘");
 
             gameManager.score = 0; // 점수 초기화
+
+            gameManager.GameOver();
         }
     }
 }
