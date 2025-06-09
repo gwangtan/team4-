@@ -29,6 +29,7 @@ public class GameButton : MonoBehaviour
         SettingPanel.SetActive(true);
     }
 
+
     public void CloseSeeting()
     {
         SettingPanel.SetActive(false );
