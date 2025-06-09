@@ -2140,8 +2140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34823fa5d37275a48ad3b041181f7464, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HelpPanel: {fileID: 0}
-  SettingPanel: {fileID: 0}
+  HelpPanel: {fileID: 1295187443}
+  SettingPanel: {fileID: 358998946}
 --- !u!4 &2017519034
 Transform:
   m_ObjectHideFlags: 0
