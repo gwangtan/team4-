@@ -11,6 +11,10 @@ public class TownButton : MonoBehaviour
         SceneManager.LoadScene("Town");
     }
 
+    public void EnterDungeon()
+    {
+        SceneManager.LoadScene("InGame(d)");
+    }
 
     // Start is called before the first frame update
     void Start()
