@@ -2162,7 +2162,7 @@ GameObject:
   - component: {fileID: 1897019004}
   - component: {fileID: 1897019003}
   m_Layer: 5
-  m_Name: Button(Map)
+  m_Name: Button(Town)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
