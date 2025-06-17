@@ -66,11 +66,13 @@ public class Enemy : Entity
     }
     private void ChangeEnemy()
     {
+        transform.position = new Vector3(36.14f, -1.81f, 0f);
         // 무작위 스프라이트 선택
         if (enemySprites.Length > 0)
         {
             int index = Random.Range(0, enemySprites.Length);
             spriteRenderer.sprite = enemySprites[index];
+
         }
 
         // HP를 200 ~ 500 랜덤 설정
