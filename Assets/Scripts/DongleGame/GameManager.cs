@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
 
     public int KillCount = 0;       //적 처치 수
     public TextMeshProUGUI killCountText;  //텍스트 연결
+    public Player player;//플래이어 연결
 
     private void Awake()
     {

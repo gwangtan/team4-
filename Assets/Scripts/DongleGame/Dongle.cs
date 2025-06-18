@@ -16,6 +16,7 @@ public class Dongle : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     float deadTime;
+    public Player player;
 
     private void Awake()
     {
@@ -53,6 +54,7 @@ public class Dongle : MonoBehaviour
             mousePos.y = 8;     //떨어지는 위치 설정
             mousePos.z = 0;     //z축 설정
             transform.position = Vector3.Lerp(transform.position, mousePos, 0.2f);   //0부터 1 사이값(구슬이 마우스를 향해 천천히 따라옴)
+
         }
     }
 

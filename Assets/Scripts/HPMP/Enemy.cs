@@ -76,7 +76,8 @@ public class Enemy : Entity
         }
 
         // HP를 200 ~ 500 랜덤 설정
-        maxHP = Random.Range(200, 501);
+        maxHP = Random.Range(200 + (gameManager.KillCount * 100), 501 + (gameManager.KillCount * 100));
+
         HP = maxHP;
     }
 
