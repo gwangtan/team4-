@@ -168,6 +168,7 @@ MonoBehaviour:
   isDrag: 1
   isMerge: 0
   rigid: {fileID: 0}
+  player: {fileID: 0}
 --- !u!95 &498051642429646171
 Animator:
   serializedVersion: 5
