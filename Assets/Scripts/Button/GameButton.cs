@@ -8,6 +8,7 @@ public class GameButton : MonoBehaviour
 
     public GameObject HelpPanel;
     public GameObject SettingPanel;
+    public GameObject ExitButton;
 
     public void GameStartButtonAction()
     {
@@ -35,6 +36,7 @@ public class GameButton : MonoBehaviour
     {
         SettingPanel.SetActive(false );
     }
+
     // Start is called before the first frame update
     void Start()
     {
