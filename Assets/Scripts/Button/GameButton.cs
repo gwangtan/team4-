@@ -11,7 +11,8 @@ public class GameButton : MonoBehaviour
 
     public void GameStartButtonAction()
     {
-        SceneManager.LoadScene("InGame(d)");
+        SceneManager.LoadScene("Town");
+
     }
 
     public void OpenPanel()
